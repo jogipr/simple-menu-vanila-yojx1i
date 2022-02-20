@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto+Serif:wght@300&family=Roboto:wght@100&display=swap');
 * {
   padding: 0px;
   margin: 0px;
@@ -5,6 +6,7 @@
 
 body {
   background: rgb(244, 246, 247);
+  font-family: 'Roboto', sans-serif;
 }
 
 .menu-container {
@@ -13,6 +15,7 @@ body {
   height: 2rem;  
   padding: 1rem;
   align-items: center;
+  font-weight: 800;
 }
 
 .title{
@@ -35,6 +38,43 @@ body {
 
 }
 
+.accordian-container{
+  width: 80vw;
+  margin: auto;
+  margin-top: 10%;
+  font-weight: 100;
+}
+
+.acc-list-container{
+  list-style: none;
+  position: relative;
+}
+
+.acc-list{
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #4e504f; 
+  border-radius: 8px;
+  position: relative;
+  color: white;
+}
+
+.acc-list::after{
+  content: "+";
+  position: absolute;
+  right: 1rem;
+  top:1rem;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.panel-content{
+  height: 0px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
 @media only screen and (max-width: 600px) {
   .menu-container{
     flex-direction: column;
@@ -52,5 +92,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+  .accordian-container{    
+    margin-left: 40vw;
+  }
+  body{
+    display: flex;
   }
 }
