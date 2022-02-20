@@ -4,18 +4,53 @@
 }
 
 body {
-  background: rgb(118, 123, 124);
+  background: rgb(244, 246, 247);
 }
 
 .menu-container {
-  display: flex;
-  flex-grow: 2;
+  display: flex;   
+  background-color: black; 
+  height: 2rem;  
+  padding: 1rem;
+  align-items: center;
+}
+
+.title{
+  flex-grow: 1;
+  color: white;
+  padding: 1rem;
 }
 
 .list-container {
   list-style: none;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .list-container .list {
   display: inline-block;
+  padding: 1rem;
+  color: white;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-container{
+    flex-direction: column;
+    background-color: black; 
+    position: fixed;
+    top:0;
+    height: 100vh;
+    width: 30vw;
+    transition: all 0.5s ease-out;
+  }
+  .title{
+    flex-grow: unset;    
+  }
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
